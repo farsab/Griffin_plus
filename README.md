@@ -57,8 +57,6 @@ GRIFFIN-Plus PPL: 30.97 (keep=0.50)
 Perplexity rises only ≈ 4 %, despite *halving* every FF layer and running the
 entire inference with the compact network.
 
----
-
 ## Scaling to larger LLMs
 
 ```bash
@@ -72,8 +70,6 @@ The implementation auto-detects FF sub-layers in Llama-2, GPT-NeoX, Mistral,
 and similar architectures. VRAM savings scale roughly linearly with the
 keep-ratio.
 
----
-
 ## Improvement over the original GRIFFIN
 Orignal Griffin is available at https://arxiv.org/abs/2402.19427 and its repo is https://github.com/hdong920/GRIFFIN
 
@@ -81,7 +77,4 @@ The original GRIFFIN reports quality drift on *very* long generations because th
 **GRIFFIN-Plus** refreshes the experts every `refresh_interval` tokens (default = 64) using the most recent context window, reducing that degradation
 with negligible overhead (one forward pass per refresh).
 
----
 
-```
-```
